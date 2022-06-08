@@ -38,8 +38,6 @@ public class Program1
     {
        // declare variables here
 	   double amount = 32500.00;
-	   double numTwiceMonth = amount/24;
-       double numBiWeekly = amount/26;
        String twiceMonth;
        String biWeekly;
 
@@ -47,11 +45,17 @@ public class Program1
     
        // Enter more statements here to make
 	   // the program work as expected
+       
+       //I wasn't sure about formatting the numbers, as it wasn't mentioned in 
+       //the assignment instructions. I read the comment above this to indicate
+       //that I should add statements rather than modify existing ones, so instead
+       //of using printf, I used the DecimalFormat class as described in the Java 
+       //documentation found here: https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html
 
-       DecimalFormat payFormatter = new DecimalFormat("##,###.##");
+       DecimalFormat payFormatter = new DecimalFormat("$##,###.##");
 
-       twiceMonth = "$" + payFormatter.format(numTwiceMonth);
-       biWeekly = "$" + payFormatter.format(numBiWeekly);
+       twiceMonth = payFormatter.format(amount/24);
+       biWeekly = payFormatter.format(amount/26);
 
        System.out.println("Annual Salary           = " + amount);
        System.out.println("When paid twice a month = " + twiceMonth);
@@ -74,7 +78,7 @@ public class Program1
     {
        System.out.println("Name:    Charles Shifflett");
        System.out.println("Course:  ITSE 2321 Object-Oriented Programming");
-       System.out.println("Program: One \n");
+       System.out.println("Program: 1 \n");
 
     } // End of the developerInfo method
 }
