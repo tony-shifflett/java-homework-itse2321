@@ -41,11 +41,28 @@ public class Program2
        double taxPercentage = .0825;
        double tipPercentage = .15;
        double billTotal; 
+       double tipAmount;
+       double taxAmount; 
 
        
 
        developerInfo();
-       billTotal = mealCost+(taxPercentage*mealCost)+(tipPercentage*mealCost);
+       //calculate various costs
+       tipAmount = mealCost*tipPercentage;
+       taxAmount = mealCost*taxPercentage;
+       billTotal = mealCost+tipAmount+tipPercentage;
+       
+
+
+       //display costs
+       //DecimalFormat utilized as in Program1
+       DecimalFormat costFormatter = new DecimalFormat("$##,###.##");
+
+
+       System.out.println("Meal cost           = " + costFormatter.format(mealCost));
+       System.out.println("Total Tip           = " + costFormatter.format(tipAmount));
+       System.out.println("Total Tax           = " + costFormatter.format(taxAmount));
+       System.out.println("Bill Total          = " + costFormatter.format(billTotal));
        
     } // End of the main method
 	
