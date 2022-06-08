@@ -38,14 +38,15 @@ public class Program2
     {
        // variable declarations
        double mealCost = 44.50; 
-       double taxPercentage = .0825
-       double tipPercentage = .15
+       double taxPercentage = .0825;
+       double tipPercentage = .15;
        double billTotal; 
 
-
-       developerInfo();
        
 
+       developerInfo();
+       billTotal = mealCost+(taxPercentage*mealCost)+(tipPercentage*mealCost);
+       
     } // End of the main method
 	
 	//***************************************************************
