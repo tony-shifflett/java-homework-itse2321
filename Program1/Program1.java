@@ -53,11 +53,6 @@ public class Program1
        twiceMonth = "$" + payFormatter.format(numTwiceMonth);
        biWeekly = "$" + payFormatter.format(numBiWeekly);
 
-       //dev code 
-       System.out.println(amount);
-       System.out.println(numBiWeekly);
-       System.out.println(numTwiceMonth);
-       //end dev code
        System.out.println("Annual Salary           = " + amount);
        System.out.println("When paid twice a month = " + twiceMonth);
        System.out.println("When paid bi-weekly     = " + biWeekly);
