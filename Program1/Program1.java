@@ -18,6 +18,9 @@
 //                 of an employee over two different pay periods  
 //********************************************************************
 
+//import to allow use of DecimalFormat
+import java.text.*; 
+
 public class Program1
 {
     //***************************************************************
@@ -35,13 +38,26 @@ public class Program1
     {
        // declare variables here
 	   double amount = 32500.00;
-	   double twiceMonth = amount/24;
-       double biWeekly = amount/26;
+	   double numTwiceMonth = amount/24;
+       double numBiWeekly = amount/26;
+       String twiceMonth;
+       String biWeekly;
+
        developerInfo();
     
        // Enter more statements here to make
 	   // the program work as expected
-    
+
+       DecimalFormat payFormatter = new DecimalFormat("##,###.##");
+
+       twiceMonth = "$" + payFormatter.format(numTwiceMonth);
+       biWeekly = "$" + payFormatter.format(numBiWeekly);
+
+       //dev code 
+       System.out.println(amount);
+       System.out.println(numBiWeekly);
+       System.out.println(numTwiceMonth);
+       //end dev code
        System.out.println("Annual Salary           = " + amount);
        System.out.println("When paid twice a month = " + twiceMonth);
        System.out.println("When paid bi-weekly     = " + biWeekly);
