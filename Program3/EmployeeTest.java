@@ -10,6 +10,22 @@ public class EmployeeTest{
         System.out.println(testEmployee.displayLastName());
         System.out.println(testEmployee.displaySalary()); 
 
+        //testing setters
+        testEmployee.setFirstName("Charles"); 
+        testEmployee.setLastName("Bryant"); 
+        testEmployee.setSalary(6000);
+
+        //verifying results of getter tests
+        System.out.println(testEmployee.displayFirstName());
+        System.out.println(testEmployee.displayLastName());
+        System.out.println(testEmployee.displaySalary()); 
+
+        //testing salary getter with invalid number 
+        testEmployee.setSalary(-4000);
+        System.out.println(testEmployee.displaySalary()); 
+
+        
+
     }
 }
 

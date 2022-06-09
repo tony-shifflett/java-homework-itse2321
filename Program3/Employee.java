@@ -23,4 +23,19 @@ public class Employee {
     public double displaySalary(){
         return monthlySalary;
     }
+
+    //setters
+    void setFirstName (String first){
+        this.firstName = first; 
+    }
+
+    void setLastName (String last){
+        this.lastName = last;
+    }
+
+    void setSalary(double pay){
+        if (pay >= 0){
+            this.monthlySalary = pay; 
+        }
+    }
 }
