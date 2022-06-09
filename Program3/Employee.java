@@ -1,4 +1,22 @@
-
+//********************************************************************
+//
+//  Author:        Charles Shifflett
+//
+//  Program #:     3
+//
+//  File Name:     Employee.java
+//
+//  Course:        ITSE 2321 Object-Oriented Programming - Java 
+//
+//  Due Date:      6/17/2022
+//
+//  Instructor:    Prof. Fred Kumi 
+//
+//  Chapter:       Chapter 2
+//
+//  Description:   Employee class and paired test implementation displaying
+//                 class methods and attributes
+//********************************************************************
 
 public class Employee {
     //class attributes
