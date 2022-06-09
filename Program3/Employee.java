@@ -12,4 +12,15 @@ public class Employee {
         this.lastName = last;
         this.monthlySalary = pay; 
     }
+
+    //getters
+    public String displayFirstName(){
+        return firstName; 
+    }
+    public String displayLastName(){
+        return lastName;
+    }
+    public double displaySalary(){
+        return monthlySalary;
+    }
 }
