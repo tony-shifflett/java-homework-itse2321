@@ -25,15 +25,13 @@ public class Employee {
     }
 
     //setters
-    void setFirstName (String first){
+    public void setFirstName (String first){
         this.firstName = first; 
     }
-
-    void setLastName (String last){
+    public void setLastName (String last){
         this.lastName = last;
     }
-
-    void setSalary(double pay){
+    public void setSalary(double pay){
         if (pay >= 0){
             this.monthlySalary = pay; 
         }
