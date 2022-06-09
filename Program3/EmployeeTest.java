@@ -1,30 +1,28 @@
 
 public class EmployeeTest{
     public static void main(String[] args){
+        //create two employee objects with info provided in prompt
+        Employee firstEmployee = new Employee ("John", "Doe", 2875.00);
+        Employee secondEmployee = new Employee ("Jane", "Doe", 3150.75);
 
-        //instantiating an object of Employee class 
-        Employee testEmployee = new Employee("Tony", "Shifflett", 5000);
-        
-        //verifying getters work as expected
-        System.out.println(testEmployee.displayFirstName());
-        System.out.println(testEmployee.displayLastName());
-        System.out.println(testEmployee.displaySalary()); 
+        //display employee info
+        System.out.printf("%s %s earns $%,.2f per month%n", firstEmployee.displayFirstName(), 
+        firstEmployee.displayLastName(),firstEmployee.displaySalary());
 
-        //testing setters
-        testEmployee.setFirstName("Charles"); 
-        testEmployee.setLastName("Bryant"); 
-        testEmployee.setSalary(6000);
+        System.out.printf("%s %s earns $%,.2f per month%n", secondEmployee.displayFirstName(), 
+        secondEmployee.displayLastName(),secondEmployee.displaySalary());
 
-        //verifying results of getter tests
-        System.out.println(testEmployee.displayFirstName());
-        System.out.println(testEmployee.displayLastName());
-        System.out.println(testEmployee.displaySalary()); 
+        //additional print statement to improve legibility wihtout modifying previous statements, which may create an issue if additional test cases are added later
+        System.out.println("");
 
-        //testing salary getter with invalid number 
-        testEmployee.setSalary(-4000);
-        System.out.println(testEmployee.displaySalary()); 
+        //raise the salary of each employee by 20%
+        firstEmployee.setSalary(firstEmployee.displaySalary()*1.20);
+        secondEmployee.setSalary(secondEmployee.displaySalary()*1.20);
 
-        
+        //display results of the raise
+        System.out.printf("%s %s earns $%,.2f per month following a 20%% raise %n", firstEmployee.displayFirstName(), firstEmployee.displayLastName(),firstEmployee.displaySalary());
+
+        System.out.printf("%s %s earns $%,.2f per month following a 20%% raise %n", secondEmployee.displayFirstName(), secondEmployee.displayLastName(),secondEmployee.displaySalary());
 
     }
 }
