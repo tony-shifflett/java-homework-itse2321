@@ -37,10 +37,20 @@ public class Program5
 	public static void main(String[] args)
     {
         int numFloors; 
+        int numRooms = 0; 
+        int occupiedRooms = 0; 
         Scanner floorNumScanner =  new Scanner(System.in);
         
         System.out.print("How many floors are there?: "); 
         numFloors = floorNumScanner.nextInt(); 
+
+        for (int i = 0; i < numFloors; i++){
+            System.out.printf("How many rooms are there on Floor %d: ", i+1);
+            numRooms += floorNumScanner.nextInt(); 
+            System.out.print("How many of those rooms are occupied?: ");
+            occupiedRooms += floorNumScanner.nextInt(); 
+
+        }
 
 	    developerInfo();
 	 
