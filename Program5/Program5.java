@@ -18,6 +18,9 @@
 //
 //********************************************************************
 
+//scanner
+import java.util.Scanner; 
+
 public class Program5
 {
     //***************************************************************
@@ -33,9 +36,13 @@ public class Program5
     //**************************************************************
 	public static void main(String[] args)
     {
+        int numFloors; 
+        Scanner floorNumScanner =  new Scanner(System.in);
+        
+        System.out.print("How many floors are there?: "); 
+        numFloors = floorNumScanner.nextInt(); 
+
 	    developerInfo();
-
-
 	 
     } // End of the main method
 	
@@ -57,3 +64,4 @@ public class Program5
        System.out.println("Program: Five \n");
 
     } // End of the developerInfo method
+}
