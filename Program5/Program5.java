@@ -41,26 +41,26 @@ public class Program5
         int occupiedRooms = 0; 
         double percentOccupied; 
         Scanner floorNumScanner =  new Scanner(System.in);
+
+        developerInfo();
         
-        System.out.print("How many floors are there?: "); 
-        numFloors = floorNumScanner.nextInt(); 
+        System.out.print("Floors on the hotel: "); 
+        numFloors = floorNumScanner.nextInt();
+        System.out.println("");
 
         for (int i = 0; i < numFloors; i++){
-            System.out.printf("How many rooms are there on Floor %d: ", i+1);
+            System.out.printf("Rooms on floor %d: ", i+1);
             numRooms += floorNumScanner.nextInt(); 
-            System.out.print("How many of those rooms are occupied?: ");
+            System.out.print("Rooms occupied?: ");
             occupiedRooms += floorNumScanner.nextInt(); 
             System.out.println("");
         }
         //calculate percentage of rooms that are occupied
         percentOccupied = (occupiedRooms * 100)/ numRooms; 
 
-	    developerInfo();
-        if (percentOccupied % 1 == 0){
-            System.out.printf("%.0f%% of the hotel rooms are occupied.%n%n", percentOccupied); 
-        }else{
-            System.out.printf(" %.1f%% of the hotel rooms are occupied.%n%n", percentOccupied);
-        }
+	    //display results 
+        System.out.printf(" %.1f%% of the hotel rooms are occupied.%n%n", percentOccupied);
+        
     } // End of the main method
 	
 	//***************************************************************
