@@ -18,9 +18,6 @@
 //                 associated with a restaurant bill.   
 //********************************************************************
 
-//import to allow use of DecimalFormat
-import java.text.*; 
-
 public class Program2
 {
     //***************************************************************
@@ -54,15 +51,11 @@ public class Program2
        
 
 
-       //display costs
-       //DecimalFormat utilized as in Program1
-       DecimalFormat costFormatter = new DecimalFormat("$##,###.##");
 
-
-       System.out.println("Meal cost           = " + costFormatter.format(mealCost));
-       System.out.println("Total Tip           = " + costFormatter.format(tipAmount));
-       System.out.println("Total Tax           = " + costFormatter.format(taxAmount));
-       System.out.println("Bill Total          = " + costFormatter.format(billTotal));
+       System.out.printf("Meal cost           = $%,.2f%n", mealCost);
+       System.out.printf("Total Tip           = $%,.2f%n", tipAmount);
+       System.out.printf("Total Tax           = $%,.2f%n", taxAmount);
+       System.out.printf("Bill Total          = $%,.2f%n", billTotal);
        
     } // End of the main method
 	
