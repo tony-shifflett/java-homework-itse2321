@@ -39,6 +39,7 @@ public class Program5
         int numFloors; 
         int numRooms = 0; 
         int occupiedRooms = 0; 
+        double percentOccupied; 
         Scanner floorNumScanner =  new Scanner(System.in);
         
         System.out.print("How many floors are there?: "); 
@@ -51,6 +52,8 @@ public class Program5
             occupiedRooms += floorNumScanner.nextInt(); 
 
         }
+        //calculate percentage of rooms that are occupied
+        percentOccupied = (occupiedRooms * 100)/ numRooms; 
 
 	    developerInfo();
 	 
