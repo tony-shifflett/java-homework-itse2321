@@ -56,7 +56,7 @@ public class Program5
             System.out.println("");
         }
         //calculate percentage of rooms that are occupied
-        percentOccupied = (occupiedRooms * 100)/ numRooms; 
+        percentOccupied = (double)(occupiedRooms * 100)/ numRooms; 
 
 	    //display results 
         System.out.printf(" %.1f%% of the hotel rooms are occupied.%n%n", percentOccupied);
