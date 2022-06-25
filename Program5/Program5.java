@@ -50,13 +50,17 @@ public class Program5
             numRooms += floorNumScanner.nextInt(); 
             System.out.print("How many of those rooms are occupied?: ");
             occupiedRooms += floorNumScanner.nextInt(); 
-
+            System.out.println("");
         }
         //calculate percentage of rooms that are occupied
         percentOccupied = (occupiedRooms * 100)/ numRooms; 
 
 	    developerInfo();
-	 
+        if (percentOccupied % 1 == 0){
+            System.out.printf("%.0f%% of the hotel rooms are occupied.%n%n", percentOccupied); 
+        }else{
+            System.out.printf(" %.1f%% of the hotel rooms are occupied.%n%n", percentOccupied);
+        }
     } // End of the main method
 	
 	//***************************************************************
