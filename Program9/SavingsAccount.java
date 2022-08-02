@@ -11,6 +11,7 @@ class SavingsAccount {
 
     private void calculateMonthlyInterest (){
         double monthlyInterest = savingsBalance * (annualInterestRate/12);
+        savingsBalance += monthlyInterest;
     }
 
     private void depositAmount(double deposit){
