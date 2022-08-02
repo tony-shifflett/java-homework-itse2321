@@ -27,6 +27,10 @@ class SavingsAccount {
         annualInterestRate = newRate;
     }
 
+    //test code
+    public void displayBalance(){
+        System.out.println(savingsBalance);
+    }
 
     public static void main (String [] args) {
         System.out.println("So far so good");
