@@ -10,7 +10,7 @@ class SavingsAccount {
     }
 
     private void calculateMonthlyInterest (){
-        double monthlyInterest = savingsBalance * annualInterestRate;
+        double monthlyInterest = savingsBalance * (annualInterestRate/12);
     }
 
     private void depositAmount(double deposit){
@@ -32,7 +32,4 @@ class SavingsAccount {
         System.out.println(savingsBalance);
     }
 
-    public static void main (String [] args) {
-        System.out.println("So far so good");
-    }
 }
